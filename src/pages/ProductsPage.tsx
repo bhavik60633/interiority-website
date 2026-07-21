@@ -6,7 +6,7 @@ import PageHero from '../components/PageHero'
 import ProductCollection from '../components/ProductCollection'
 import Contact from '../components/Contact'
 
-import heroImg from '../assets/new/vase-crystal-set.jpg'
+import heroImg from '../assets/bedside-styling.png'
 
 const categories = [
   { name: 'Leather Goods', desc: 'Paper holders, amenity boxes, trays, watch boxes, and waste bins — crafted in premium leather and leatherite.' },
