@@ -175,7 +175,7 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'lavender',
     name: 'Lavender',
-    type: 'Face & Body Mist',
+    type: 'Hydrosol',
     sizes: SIZES,
     essence: 'A quiet field at dusk, distilled into a single calming note.',
     description:
@@ -194,7 +194,7 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'calendula',
     name: 'Calendula',
-    type: 'Face & Body Mist',
+    type: 'Hydrosol',
     sizes: SIZES,
     essence: 'Marigold water — the gentlest care for delicate skin.',
     description:
