@@ -30,10 +30,21 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    // The page scrolls on <body> (body has overflow-x:hidden → overflow-y:auto),
+    // not window, so read whichever scroll position is live and listen in the
+    // capture phase to catch the scroll event regardless of the container.
+    const getY = () =>
+      window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0
+    const onScroll = () => setScrolled(getY() > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true, capture: true })
+    return () => window.removeEventListener('scroll', onScroll, { capture: true })
   }, [])
+
+  // At the top of the page the bar is transparent over a hero image, so text
+  // must be light. Once scrolled, the bar gets a light background and text
+  // switches back to the dark theme tokens.
+  const onDark = !scrolled
 
   return (
     <nav
@@ -43,11 +54,23 @@ export default function Navbar() {
           : 'h-20 bg-transparent'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-20">
+      {/* Contrast scrim — keeps light text legible over bright hero images */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent transition-opacity duration-500 ${
+          onDark ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+
+      <div className="relative max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img src={logo} alt="Interiority" className="h-8 w-8 object-cover rounded-[2px]" />
-          <span className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-on-surface">
+          <span
+            className={`font-sans text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors duration-300 ${
+              onDark ? 'text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]' : 'text-on-surface'
+            }`}
+          >
             Interiority
           </span>
         </Link>
@@ -58,14 +81,22 @@ export default function Navbar() {
             <Link
               key={link.label}
               to={link.to}
-              className="font-sans text-[11px] font-medium tracking-[0.15em] uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-300"
+              className={`font-sans text-[11px] font-medium tracking-[0.15em] uppercase transition-colors duration-300 ${
+                onDark
+                  ? 'text-white/85 hover:text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]'
+                  : 'text-on-surface-variant hover:text-on-surface'
+              }`}
             >
               {link.label}
             </Link>
           ))}
           <Link
             to="/lag"
-            className="font-serif text-[13px] font-medium tracking-[0.12em] uppercase text-secondary hover:text-primary transition-colors duration-300"
+            className={`font-serif text-[13px] font-medium tracking-[0.12em] uppercase transition-colors duration-300 ${
+              onDark
+                ? 'text-white hover:text-white/80 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]'
+                : 'text-secondary hover:text-primary'
+            }`}
           >
             L&#259;g
           </Link>
@@ -78,7 +109,11 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"
-            className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary transition-colors duration-300"
+            className={`inline-flex items-center justify-center w-9 h-9 rounded-full border transition-colors duration-300 ${
+              onDark
+                ? 'border-white/50 text-white hover:border-white hover:bg-white/10'
+                : 'border-outline-variant/40 text-on-surface-variant hover:border-primary hover:text-primary'
+            }`}
           >
             <WhatsAppIcon className="w-4 h-4" />
           </a>
@@ -96,9 +131,9 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
-          <span className={`block w-5 h-[1.5px] bg-on-surface transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-[4.5px]' : ''}`} />
-          <span className={`block w-5 h-[1.5px] bg-on-surface transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-[1.5px] bg-on-surface transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-[4.5px]' : ''}`} />
+          <span className={`block w-5 h-[1.5px] transition-all duration-300 ${onDark && !mobileOpen ? 'bg-white' : 'bg-on-surface'} ${mobileOpen ? 'rotate-45 translate-y-[4.5px]' : ''}`} />
+          <span className={`block w-5 h-[1.5px] transition-all duration-300 ${onDark && !mobileOpen ? 'bg-white' : 'bg-on-surface'} ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-5 h-[1.5px] transition-all duration-300 ${onDark && !mobileOpen ? 'bg-white' : 'bg-on-surface'} ${mobileOpen ? '-rotate-45 -translate-y-[4.5px]' : ''}`} />
         </button>
       </div>
 
