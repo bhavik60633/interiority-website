@@ -73,7 +73,7 @@ export default function LagTimeline() {
                   {p.name}
                 </h3>
                 <span className="font-sans text-[10px] tracking-[0.22em] uppercase text-on-surface-variant/55 mt-3 block">
-                  {p.type} · {p.size}
+                  {p.type}
                 </span>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function LagTimeline() {
                   {p.name}
                 </h3>
                 <span className="font-sans text-[9px] tracking-[0.2em] uppercase text-on-surface-variant/55 mt-1 block">
-                  {p.type} · {p.size}
+                  {p.type}
                 </span>
               </div>
 
@@ -132,7 +132,10 @@ export default function LagTimeline() {
                       </li>
                     ))}
                   </ul>
-                  <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-on-surface-variant/45 mt-7">
+                  <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-on-surface-variant/60 mt-7">
+                    Sizes · {p.sizes.map((s) => s.replace(' ml', '')).join(' · ')} ml
+                  </p>
+                  <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-on-surface-variant/45 mt-2">
                     Storage · {p.storage}
                   </p>
                 </div>

@@ -49,7 +49,7 @@ function Bottle({ p }: { p: LagProduct }) {
           {p.name}
         </h3>
         <span className="hidden sm:block font-sans text-[8px] md:text-[9px] tracking-[0.2em] uppercase text-white/70 mt-0.5">
-          {p.type} · {p.size}
+          {p.type}
         </span>
       </div>
     </div>
