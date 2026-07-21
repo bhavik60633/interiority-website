@@ -53,10 +53,13 @@ export default function LagShowcase({ showHeading = true }: LagShowcaseProps) {
           className="absolute inset-0 w-full h-full object-contain md:object-cover object-center"
         />
 
+        {/* 30% dark tint — adds depth and improves overlay legibility */}
+        <div className="pointer-events-none absolute inset-0 bg-black/30" />
+
         {/* Bottom tagline — fades in after video ends or on scroll */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end pb-10 sm:pb-14 md:pb-20">
           <motion.span
-            className="font-sans text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-[0.35em] uppercase text-warm-charcoal/60 text-center px-4"
+            className="font-sans text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-[0.35em] uppercase text-white/80 text-center px-4"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
