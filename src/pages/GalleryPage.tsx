@@ -7,7 +7,7 @@ import PageHero from '../components/PageHero'
 import CircularGallery from '../components/CircularGallery'
 import GalleryMosaic from '../components/GalleryMosaic'
 
-import heroImg from '../assets/new/cover-tablescape.jpg'
+import heroImg from '../assets/floral-arrangement.png'
 
 export default function GalleryPage() {
   return (

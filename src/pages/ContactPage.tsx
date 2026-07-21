@@ -6,7 +6,7 @@ import PageHero from '../components/PageHero'
 import Contact from '../components/Contact'
 import ContactDetails from '../components/ContactDetails'
 
-import heroImg from '../assets/new/category-accessories.jpg'
+import heroImg from '../assets/hotel-lobby.png'
 
 const faqs = [
   {
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Do you work with hotels outside India?',
-    a: 'Yes \u2014 we serve luxury properties across the Middle East, Southeast Asia, and Europe. Our logistics network handles international shipping and installation.',
+    a: 'Yes — we serve luxury properties across the Middle East, Southeast Asia, and Europe. Our logistics network handles international shipping and installation.',
   },
   {
     q: 'Can we order samples before committing?',
@@ -34,9 +34,9 @@ export default function ContactPage() {
       <main>
         <PageHero
           eyebrow="Contact Us"
-          title="Let\u2019s Build Something"
+          title="Let’s Build Something"
           subtitle="Together"
-          description="Whether you are planning a new property, refreshing guest rooms, or sourcing bespoke amenities \u2014 our team is ready to help. Reach out and we will respond within 24 hours."
+          description="Whether you are planning a new property, refreshing guest rooms, or sourcing bespoke amenities — our team is ready to help. Reach out and we will respond within 24 hours."
           image={heroImg}
         />
         <ContactDetails />

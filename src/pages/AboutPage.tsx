@@ -9,7 +9,7 @@ import BeyondInteriors from '../components/BeyondInteriors'
 import LifestyleCategories from '../components/LifestyleCategories'
 import Trust from '../components/Trust'
 
-import heroImg from '../assets/new/who-we-are.jpg'
+import heroImg from '../assets/console-styling.png'
 
 const values = [
   { title: 'Craftsmanship Over Mass Production', desc: 'Every object passes through the hands of skilled artisans. We choose slow craft over fast manufacturing because guest experiences deserve that difference.' },

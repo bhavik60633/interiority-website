@@ -7,7 +7,7 @@ import Services from '../components/Services'
 import Process from '../components/Process'
 import Contact from '../components/Contact'
 
-import heroImg from '../assets/new/category-hospitality.jpg'
+import heroImg from '../assets/luxury-rug-lounge.png'
 
 const reasons = [
   {
