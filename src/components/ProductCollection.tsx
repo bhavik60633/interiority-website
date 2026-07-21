@@ -1,31 +1,20 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useInView } from 'motion/react'
+import { products as allProducts, type Product } from '../data/products'
 
-import leatherHolder from '../assets/leather-holder.png'
-import bathroomAmenities from '../assets/bathroom-amenities.png'
-import bathroomSet from '../assets/bathroom-set.png'
-import glassware from '../assets/glassware.png'
-import leatherTray from '../assets/leather-tray.png'
-import artisanVase from '../assets/artisan-vase.png'
-import crystalLamp from '../assets/crystal-lamp.png'
-import bedsideStyling from '../assets/bedside-styling.png'
-import floralArrangement from '../assets/floral-arrangement.png'
+interface ProductCollectionProps {
+  variant?: 'teaser' | 'full'
+  limit?: number
+  ctaHref?: string
+}
 
-const products = [
-  { title: 'Leather Paper Holders', material: 'LEATHER', img: leatherHolder },
-  { title: 'Amenity Boxes', material: 'BRASS & STONE', img: bathroomAmenities },
-  { title: 'Bathroom Accessory Sets', material: 'MARBLE & LEATHER', img: bathroomSet },
-  { title: 'Glassware', material: 'CRYSTAL', img: glassware },
-  { title: 'Trays', material: 'LEATHER', img: leatherTray },
-  { title: 'Vases & Bowls', material: 'TERRACOTTA', img: artisanVase },
-  { title: 'Lamps', material: 'GLASS & BRASS', img: crystalLamp },
-  { title: 'Bedside Accessories', material: 'MIXED', img: bedsideStyling },
-  { title: 'Decorative Objects', material: 'BRASS', img: floralArrangement },
-]
-
-export default function ProductCollection() {
+export default function ProductCollection({ variant = 'full', limit, ctaHref = '/products' }: ProductCollectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' })
+
+  const count = limit ?? (variant === 'teaser' ? 6 : allProducts.length)
+  const products = allProducts.slice(0, count)
 
   return (
     <section id="products" ref={sectionRef} className="bg-surface py-32 md:py-48">
@@ -60,22 +49,26 @@ export default function ProductCollection() {
         {/* Product grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, i) => (
-            <ProductCard
-              key={product.title}
-              product={product}
-              index={i}
-              isInView={isInView}
-            />
+            <ProductCard key={product.title} product={product} index={i} isInView={isInView} />
           ))}
         </div>
 
         {/* CTA */}
         <motion.div
-          className="text-center mt-16 md:mt-24"
+          className="text-center mt-16 md:mt-24 flex flex-wrap items-center justify-center gap-4"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
+          {variant === 'teaser' && (
+            <Link
+              to={ctaHref}
+              className="inline-flex items-center gap-2 px-5 md:px-7 py-2 md:py-2.5 border border-outline-variant/40 text-on-surface text-[9px] md:text-[10px] font-semibold tracking-[0.18em] uppercase hover:border-brass/50 hover:text-primary transition-colors duration-300"
+            >
+              View All Products
+              <span aria-hidden>→</span>
+            </Link>
+          )}
           <a
             href="#contact"
             className="inline-flex items-center px-5 md:px-7 py-2 md:py-2.5 bg-primary text-on-primary text-[9px] md:text-[10px] font-semibold tracking-[0.18em] uppercase hover:bg-primary-container transition-colors duration-300"
@@ -93,7 +86,7 @@ function ProductCard({
   index,
   isInView,
 }: {
-  product: (typeof products)[0]
+  product: Product
   index: number
   isInView: boolean
 }) {

@@ -16,7 +16,7 @@ import grandLobby from '../assets/grand-lobby.png'
 */
 
 const headlines = [
-  { top: 'Designing', bottom: 'Five‑Star Experiences' },
+  { top: 'Designing', bottom: 'Five‑Star Hospitality' },
   { top: 'Quiet Luxury', bottom: 'Precisely Made' },
   { top: '', bottom: 'Interiority' },
 ]
@@ -67,7 +67,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            Five‑Star Hospitality Design
+            Exquisite Indulgence
           </motion.span>
 
           {/* Headlines — the visual anchor */}

@@ -1,25 +1,21 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useInView } from 'motion/react'
+import { projects as allProjects } from '../data/projects'
 
-import grandLobby from '../assets/grand-lobby.png'
-import luxurySuite from '../assets/luxury-suite.png'
-import consoleStyling from '../assets/console-styling.png'
-import hotelExterior from '../assets/hotel-exterior.png'
-import luxuryRugLounge from '../assets/luxury-rug-lounge.png'
-import bedsideStyling from '../assets/bedside-styling.png'
+interface LuxuryInteriorsProps {
+  variant?: 'teaser' | 'full'
+  limit?: number
+  ctaHref?: string
+}
 
-const projects = [
-  { img: grandLobby, title: 'Grand Lobby', label: 'Spatial Design', size: 'large' },
-  { img: luxurySuite, title: 'Five-Star Suite', label: 'Interior Styling', size: 'medium' },
-  { img: consoleStyling, title: 'Console Styling', label: 'Arrival Experience', size: 'medium' },
-  { img: hotelExterior, title: 'Hotel Exterior', label: 'Hospitality Architecture', size: 'large' },
-  { img: luxuryRugLounge, title: 'Luxury Lounge', label: 'Textile & Spatial', size: 'medium' },
-  { img: bedsideStyling, title: 'Bedside Styling', label: 'Guest Room Detail', size: 'medium' },
-]
-
-export default function LuxuryInteriors() {
+export default function LuxuryInteriors({ variant = 'full', limit, ctaHref = '/projects' }: LuxuryInteriorsProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' })
+
+  const count = limit ?? (variant === 'teaser' ? 4 : allProjects.length)
+  const projects = allProjects.slice(0, count)
+  const showDescriptions = variant === 'full'
 
   return (
     <section id="projects" ref={sectionRef} className="bg-surface-container py-32 md:py-48">
@@ -75,11 +71,33 @@ export default function LuxuryInteriors() {
                   <h3 className="font-display text-[22px] md:text-[28px] font-medium text-inverse-on-surface leading-[1.2] tracking-[0.02em]">
                     {project.title}
                   </h3>
+                  {showDescriptions && (
+                    <p className="font-sans text-[12px] md:text-[13px] text-inverse-on-surface/70 leading-[1.6] mt-2 max-w-[520px]">
+                      {project.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {variant === 'teaser' && (
+          <motion.div
+            className="mt-14 md:mt-20 flex flex-col items-center"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <Link
+              to={ctaHref}
+              className="inline-flex items-center gap-2 px-5 md:px-7 py-2 md:py-2.5 border border-outline-variant/40 text-on-surface text-[9px] md:text-[10px] font-semibold tracking-[0.18em] uppercase hover:border-brass/50 hover:text-primary transition-colors duration-300"
+            >
+              View All Projects
+              <span aria-hidden>→</span>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   )

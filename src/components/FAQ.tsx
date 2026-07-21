@@ -3,40 +3,24 @@ import { motion, useInView } from 'motion/react'
 
 const faqs = [
   {
-    q: 'What tech platform would you recommend for our needs?',
-    a: 'We recommend a modern, performance-first stack tailored to luxury hospitality — fast-loading pages, mobile-optimized layouts, and a CMS that lets your team update products and projects without developer support. Every detail is designed to reflect the five-star standard your brand demands.',
+    q: 'Are product colors exactly as shown?',
+    a: 'We reproduce colors as accurately as photography and screens allow, but natural materials like leather, glass, brass, and marble carry inherent variation — no two pieces are perfectly identical. For hospitality orders above a set volume, we can arrange physical samples before production.',
   },
   {
-    q: 'What is the estimated cost for building this B2B website?',
-    a: 'Project costs depend on scope, number of pages, custom features, and integrations. We provide a detailed proposal after understanding your brand, goals, and catalogue requirements — ensuring complete transparency before any work begins.',
+    q: 'How can I contact customer support?',
+    a: 'Reach our team directly by phone or email — details are on our Contact page — or use the WhatsApp button in the navigation for a quicker response. We typically reply within 24 hours on business days.',
   },
   {
-    q: 'Are there different packages available?',
-    a: 'Yes. We offer tiered engagement models — from a focused product showcase site to a full-spectrum digital presence with catalogue, lookbooks, inquiry systems, and hospitality-specific features. Each package is customized to your scale and ambitions.',
+    q: 'Are dimensions accurate?',
+    a: 'Yes. Every listed dimension is measured from the actual product or verified against manufacturer specifications. Where a piece is made to order or customized, we confirm final measurements with you before production begins.',
   },
   {
-    q: 'Are there any hidden or additional costs we should be aware of?',
-    a: 'Absolutely not. We believe in complete cost transparency. Domain, hosting, third-party integrations, and post-launch support are outlined upfront. Any additions during the project are discussed and approved before proceeding.',
+    q: 'What are your delivery timelines?',
+    a: 'In-stock accessories typically ship within 7–10 business days. Custom or bulk hospitality orders (amenity sets, bespoke furniture, large installations) follow a project timeline agreed at the start, usually 3–8 weeks depending on scope.',
   },
   {
-    q: 'How would you promote the website to reach 5-star hotels specifically?',
-    a: 'We combine targeted SEO for hospitality procurement keywords, curated LinkedIn and industry outreach, partnerships with hotel design consultants, and presence on luxury hospitality directories — ensuring your brand reaches the right decision-makers at premium properties.',
-  },
-  {
-    q: 'What are your creative ideas to make our website stand out in the B2B space?',
-    a: 'Cinematic scroll experiences, immersive product galleries with zoom-parallax, editorial storytelling layouts, and spatial design showcases that let hotel buyers feel the quality before they inquire. We design for emotional impact, not just information delivery.',
-  },
-  {
-    q: 'Would you recommend any special features?',
-    a: 'Interactive product catalogues with filtering by hotel category, downloadable spec sheets, virtual room mockups showing your products in situ, inquiry-to-quote workflows, and a private client portal for repeat orders and custom requests.',
-  },
-  {
-    q: 'Do you also offer reel shoots as part of your services?',
-    a: 'Yes. We provide end-to-end visual content services including product photography, lifestyle reel shoots, behind-the-scenes craftsmanship stories, and cinematic brand films — all produced to the aesthetic standard that luxury hospitality demands.',
-  },
-  {
-    q: 'For shoots in general, what all is included in the package?',
-    a: 'Our shoot packages include creative direction, professional photography and videography, styling and props, location scouting, post-production editing, color grading, and delivery of web-optimized and print-ready assets — everything needed for a cohesive brand presence.',
+    q: 'Can I cancel or modify my order?',
+    a: 'Standard orders can be modified or cancelled within 24 hours of confirmation. Custom and made-to-order pieces can be adjusted before production starts; once production begins, changes are handled case by case — reach out to our team as early as possible.',
   },
 ]
 

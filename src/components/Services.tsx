@@ -1,48 +1,20 @@
-import { useRef, useState, useCallback } from 'react'
-import { motion, useInView, useMotionValue, useSpring } from 'motion/react'
+import { useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { motion, useInView } from 'motion/react'
+import { services as allServices, type Service } from '../data/services'
 
-import crystalLamp from '../assets/crystal-lamp.png'
-import bathroomSet from '../assets/bathroom-set.png'
-import glassware from '../assets/glassware.png'
-import luxurySuite from '../assets/luxury-suite.png'
-import leatherTray from '../assets/leather-tray.png'
+interface ServicesProps {
+  variant?: 'teaser' | 'full'
+  limit?: number
+  ctaHref?: string
+}
 
-const services = [
-  {
-    num: '01',
-    title: 'Design Consulting',
-    desc: 'End-to-end design consulting for five-star hotels, suites, lobbies, restaurants, and guest touchpoints.',
-    img: luxurySuite,
-  },
-  {
-    num: '02',
-    title: 'Amenity Boxes & Guestroom Objects',
-    desc: 'Bespoke amenity boxes, trays, leather paper holders, tissue boxes, bathroom sets, and guest-use objects designed to elevate the guest experience.',
-    img: bathroomSet,
-  },
-  {
-    num: '03',
-    title: 'Glassware, Vases & Decorative Accessories',
-    desc: 'Luxury glasses, bowls, vases, trays, candleholders, sculptural accents, and tabletop products curated for hospitality excellence.',
-    img: glassware,
-  },
-  {
-    num: '04',
-    title: 'Interior Styling & Spatial Design',
-    desc: 'Warm, precise, layered interiors for suites, lounges, lobbies, bathrooms, and arrival zones.',
-    img: crystalLamp,
-  },
-  {
-    num: '05',
-    title: 'Product Development & Procurement',
-    desc: 'From concept to sample to final production — refined products that match hotel standards and brand identity.',
-    img: leatherTray,
-  },
-]
-
-export default function Services() {
+export default function Services({ variant = 'full', limit, ctaHref = '/services' }: ServicesProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' })
+
+  const count = limit ?? (variant === 'teaser' ? 3 : allServices.length)
+  const services = allServices.slice(0, count)
 
   return (
     <section id="services" ref={sectionRef} className="bg-surface py-28 md:py-40">
@@ -88,28 +60,40 @@ export default function Services() {
         {/* Service rows */}
         <div className="flex flex-col gap-3 md:gap-4">
           {services.map((service, i) => (
-            <ServiceRow
-              key={service.num}
-              service={service}
-              index={i}
-              isInView={isInView}
-            />
+            <ServiceRow key={service.num} service={service} index={i} isInView={isInView} />
           ))}
         </div>
 
-        {/* Bottom tagline + diamond */}
-        <motion.div
-          className="mt-14 md:mt-20 flex flex-col items-center"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          <div className="w-full h-[1px] bg-outline-variant/15 mb-8" />
-          <p className="font-sans text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-on-surface-variant/45 mb-3 text-center">
-            Thoughtful Design.&ensp;Refined Details.&ensp;Lasting Impressions.
-          </p>
-          <span className="text-brass/40 text-[11px] leading-none select-none">&#10022;</span>
-        </motion.div>
+        {variant === 'teaser' ? (
+          <motion.div
+            className="mt-14 md:mt-20 flex flex-col items-center"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <Link
+              to={ctaHref}
+              className="inline-flex items-center gap-2 px-5 md:px-7 py-2 md:py-2.5 border border-outline-variant/40 text-on-surface text-[9px] md:text-[10px] font-semibold tracking-[0.18em] uppercase hover:border-brass/50 hover:text-primary transition-colors duration-300"
+            >
+              View All Services
+              <span aria-hidden>→</span>
+            </Link>
+          </motion.div>
+        ) : (
+          /* Bottom tagline + diamond */
+          <motion.div
+            className="mt-14 md:mt-20 flex flex-col items-center"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1, delay: 0.8 }}
+          >
+            <div className="w-full h-[1px] bg-outline-variant/15 mb-8" />
+            <p className="font-sans text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-on-surface-variant/45 mb-3 text-center">
+              Thoughtful Design.&ensp;Refined Details.&ensp;Lasting Impressions.
+            </p>
+            <span className="text-brass/40 text-[11px] leading-none select-none">&#10022;</span>
+          </motion.div>
+        )}
       </div>
     </section>
   )
@@ -122,37 +106,13 @@ function ServiceRow({
   index,
   isInView,
 }: {
-  service: (typeof services)[0]
+  service: Service
   index: number
   isInView: boolean
 }) {
-  const rowRef = useRef<HTMLDivElement>(null)
-  const [hovered, setHovered] = useState(false)
-
-  /* Cursor-following image springs */
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-  const imgX = useSpring(mouseX, { stiffness: 260, damping: 26, mass: 0.5 })
-  const imgY = useSpring(mouseY, { stiffness: 260, damping: 26, mass: 0.5 })
-
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent) => {
-      if (!rowRef.current) return
-      const rect = rowRef.current.getBoundingClientRect()
-      mouseX.set(e.clientX - rect.left - 140)
-      mouseY.set(e.clientY - rect.top - 200)
-    },
-    [mouseX, mouseY],
-  )
-
   return (
     <motion.div
-      ref={rowRef}
       className="relative rounded-[12px] border border-outline-variant/15 bg-surface-container-lowest/50 cursor-pointer group"
-      style={{ overflow: 'visible' }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onMouseMove={handleMouseMove}
       initial={{ opacity: 0, y: 28 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{
@@ -242,37 +202,6 @@ function ServiceRow({
           {service.desc}
         </p>
       </div>
-
-      {/* ── Cursor-following image (lg+ only) ─────────────────── */}
-      <motion.div
-        className="hidden lg:block absolute pointer-events-none z-40 w-[260px] h-[340px] rounded-[10px] overflow-hidden"
-        style={{
-          x: imgX,
-          y: imgY,
-          opacity: hovered ? 1 : 0,
-          scale: hovered ? 1 : 0.7,
-          transition: 'opacity 0.4s cubic-bezier(0.16,1,0.3,1), scale 0.4s cubic-bezier(0.16,1,0.3,1)',
-          boxShadow: '0 30px 60px rgba(42,40,38,0.18), 0 8px 20px rgba(42,40,38,0.10)',
-        }}
-      >
-        <img
-          src={service.img}
-          alt={service.title}
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-on-surface/30 via-transparent to-transparent" />
-        <div className="absolute bottom-3 left-4 right-4">
-          <span className="font-sans text-[8px] tracking-[0.2em] uppercase text-inverse-on-surface/75">
-            {service.num} — {service.title}
-          </span>
-        </div>
-      </motion.div>
-
-      {/* Hover glow */}
-      <div
-        className="absolute inset-0 rounded-[12px] bg-gradient-to-r from-brass/[0.02] via-transparent to-dusty-rose/[0.02] pointer-events-none transition-opacity duration-700"
-        style={{ opacity: hovered ? 1 : 0 }}
-      />
     </motion.div>
   )
 }

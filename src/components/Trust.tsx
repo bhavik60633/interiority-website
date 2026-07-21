@@ -29,7 +29,7 @@ export default function Trust() {
 
         {/* Trust markers */}
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-8 md:gap-10 lg:gap-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -38,6 +38,15 @@ export default function Trust() {
           <div className="flex flex-col items-center gap-3 px-8 py-6 border border-outline-variant/30 rounded-[4px] bg-surface-container-lowest/50 backdrop-blur-sm">
             <span className="font-display text-[18px] md:text-[22px] font-medium text-on-surface tracking-[0.02em]">
               Hilton Hotels Group
+            </span>
+            <span className="font-sans text-[9px] tracking-[0.2em] uppercase text-outline">
+              Featured Client Partnership
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-3 px-8 py-6 border border-outline-variant/30 rounded-[4px] bg-surface-container-lowest/50 backdrop-blur-sm">
+            <span className="font-display text-[18px] md:text-[22px] font-medium text-on-surface tracking-[0.02em]">
+              Hyatt Chain of Hotels
             </span>
             <span className="font-sans text-[9px] tracking-[0.2em] uppercase text-outline">
               Featured Client Partnership
