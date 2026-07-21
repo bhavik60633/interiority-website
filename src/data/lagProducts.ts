@@ -1,6 +1,6 @@
 // LĂG — botanical hydrosols & body mists.
-// Names/types/sizes are taken from the product labels; benefit copy is written
-// from the well-known properties of each botanical hydrosol.
+// Names/types/sizes are taken from the product labels; description, storage and
+// benefit copy are from the brand's product sheet for each botanical water.
 
 export interface LagProduct {
   id: string
@@ -8,19 +8,26 @@ export interface LagProduct {
   type: string
   size: string
   essence: string        // short evocative line
-  benefits: string[]     // 3 benefit bullets shown on the left
+  description: string     // factual product description
+  storage: string         // storage guidance
+  benefits: string[]     // key benefit bullets shown on the left
   image: string          // public path
   accent: string         // label / heading colour
   tint: string           // soft background wash for the pinned panel
 }
 
+const STORAGE = 'Store in a cool & dry place.'
+
 export const lagProducts: LagProduct[] = [
   {
     id: 'mogra',
     name: 'Mogra Water',
-    type: 'Body Mist',
+    type: 'Face & Body Mist',
     size: '100 ml',
     essence: 'The night-blooming jasmine of Indian gardens, captured as a mist.',
+    description:
+      'Steam-distilled floral water from night-blooming mogra (Arabian jasmine). 100% pure and natural, alcohol-free, and gentle enough for daily use.',
+    storage: STORAGE,
     benefits: [
       'Envelops skin in a soft, uplifting mogra aroma',
       'Refreshes and cools through warm afternoons',
@@ -33,13 +40,17 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'rose',
     name: 'Rose',
-    type: 'Hydrosol',
+    type: 'Face & Body Mist',
     size: '100 ml',
     essence: 'Steam-distilled petals — the most forgiving water for the skin.',
+    description:
+      'Steam-distilled floral water obtained from rose petals. 100% pure and natural hydrosol, alcohol-free and suitable for everyday skincare.',
+    storage: STORAGE,
     benefits: [
-      'Hydrates and tones for a dewy finish',
-      'Soothes redness and balances the complexion',
-      'Sets makeup and revives skin any time of day',
+      'Hydrates and refreshes the skin',
+      'Helps tone and tighten pores',
+      'Balances excess oil (sebum)',
+      'Soothes irritated and sensitive skin',
     ],
     image: '/lag/rose.png',
     accent: '#c76b74',
@@ -48,13 +59,17 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'sandalwood',
     name: 'Sandalwood',
-    type: 'Hydrosol',
+    type: 'Body Mist',
     size: '100 ml',
     essence: 'Grounding chandan — warmth, stillness, and old ceremony.',
+    description:
+      'Steam-distilled floral water obtained from sandalwood bark. 100% pure and natural hydrosol — alcohol-free, vegan, and cruelty-free.',
+    storage: STORAGE,
     benefits: [
-      'Grounds the senses with a soft, woody calm',
-      'Cools and comforts sensitive skin',
-      'Refines and mattifies a shine-prone complexion',
+      'Moisturizes and hydrates the skin',
+      'Soothes irritated and inflamed skin',
+      'Reduces redness and skin sensitivity',
+      'Helps treat acne and blemishes',
     ],
     image: '/lag/sandalwood.png',
     accent: '#a97c4e',
@@ -63,13 +78,17 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'helichrysum',
     name: 'Helichrysum',
-    type: 'Hydrosol',
+    type: 'Body & Face Mist',
     size: '100 ml',
     essence: 'The “everlasting” flower — restorative and rare.',
+    description:
+      'Steam-distilled botanical water from the flowering tops of the helichrysum plant. 100% pure and natural hydrosol, gentle enough for direct application.',
+    storage: STORAGE,
     benefits: [
-      'Supports the skin’s natural renewal',
-      'Soothes and comforts stressed skin',
-      'Revives tired, dull-looking complexions',
+      'Soothes sunburns and minor skin irritation',
+      'Helps calm redness and inflammation',
+      'Supports skin regeneration and elasticity',
+      'Helps reduce the appearance of fine lines',
     ],
     image: '/lag/helichrysum.png',
     accent: '#bd9a3f',
@@ -78,13 +97,17 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'neroli',
     name: 'Neroli',
-    type: 'Hydrosol',
+    type: 'Body Mist',
     size: '100 ml',
     essence: 'Orange blossom at first light — bright and lifting.',
+    description:
+      'Steam-distilled floral water from neroli (bitter orange blossom). 100% pure and natural hydrosol — alcohol-free, vegan, and cruelty-free.',
+    storage: STORAGE,
     benefits: [
-      'Brightens and refreshes a dull complexion',
-      'Tones and tightens the look of pores',
-      'Lifts the mood with a delicate citrus-floral',
+      'Deeply cleanses and refreshes the skin',
+      'Helps regulate excess sebum (oil)',
+      'Soothes redness and inflammation',
+      'Helps improve skin elasticity',
     ],
     image: '/lag/neroli.png',
     accent: '#4f9a86',
@@ -93,9 +116,12 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'coffee',
     name: 'Coffee',
-    type: 'Hydrosol',
+    type: 'Face & Body Mist',
     size: '100 ml',
     essence: 'Roasted warmth — an unexpected, energising ritual.',
+    description:
+      'Botanical water infused with roasted coffee. 100% pure and natural, alcohol-free, and rich in naturally occurring antioxidants.',
+    storage: STORAGE,
     benefits: [
       'Awakens and energises the skin',
       'Refreshes with an antioxidant-rich veil',
@@ -108,13 +134,17 @@ export const lagProducts: LagProduct[] = [
   {
     id: 'rosehip',
     name: 'Rose Hip',
-    type: 'Hydrosol',
+    type: 'Face & Body Mist',
     size: '30 ml',
     essence: 'The fruit after the flower — nourishing and reviving.',
+    description:
+      'Steam-distilled botanical water obtained from rose hips. 100% pure and natural hydrosol, rich in naturally occurring vitamins A, C, and essential fatty acids.',
+    storage: STORAGE,
     benefits: [
-      'Nourishes and revitalises the skin',
-      'Supports suppleness and elasticity',
-      'Brightens for a healthy, lit-from-within glow',
+      'Helps tone and tighten the skin',
+      'Hydrates and refreshes the complexion',
+      'Supports collagen production for firmer skin',
+      'Helps reduce the look of fine lines and wrinkles',
     ],
     image: '/lag/rosehip.png',
     accent: '#c97a70',
@@ -126,13 +156,93 @@ export const lagProducts: LagProduct[] = [
     type: 'Hydrosol',
     size: '50 ml',
     essence: 'Queen of the night — sensuous, comforting, unmistakable.',
+    description:
+      'Steam-distilled floral water obtained from jasmine flowers. 100% pure and natural hydrosol, free from preservatives or emulsifiers.',
+    storage: STORAGE,
     benefits: [
-      'Hydrates while it softly scents the skin',
-      'Comforts and balances the complexion',
-      'Wraps the senses in a warm floral calm',
+      'Hydrates and moisturizes the skin',
+      'Soothes irritated, dry, and sensitive skin',
+      'Acts as a gentle facial toner',
+      'Helps cleanse excess oil and impurities',
     ],
     image: '/lag/jasmine.png',
     accent: '#b0913f',
     tint: '#ece2cd',
+  },
+  {
+    id: 'lavender',
+    name: 'Lavender',
+    type: 'Face & Body Mist',
+    size: '100 ml',
+    essence: 'A quiet field at dusk, distilled into a single calming note.',
+    description:
+      'Steam-distilled floral water from lavender flowers. 100% pure and natural hydrosol, alcohol-free and gentle enough for daily use.',
+    storage: STORAGE,
+    benefits: [
+      'Soothes irritated and sensitive skin',
+      'Hydrates and refreshes the skin',
+      'Helps tone skin and minimize the look of pores',
+      'Helps calm redness and inflammation',
+    ],
+    image: '/lag/lavender.png',
+    accent: '#8b7bb0',
+    tint: '#e3ddf0',
+  },
+  {
+    id: 'calendula',
+    name: 'Calendula',
+    type: 'Face & Body Mist',
+    size: '100 ml',
+    essence: 'Marigold water — the gentlest care for delicate skin.',
+    description:
+      'Steam-distilled floral water from fresh calendula flowers. 100% pure and natural hydrosol, gentle enough for direct application to the skin.',
+    storage: STORAGE,
+    benefits: [
+      'Helps soothe acne-prone skin',
+      'Reduces skin redness and irritation',
+      'Naturally hydrates and cools the skin',
+      'Assists in refining the appearance of pores',
+    ],
+    image: '/lag/calendula.png',
+    accent: '#d59a3f',
+    tint: '#f0dcb2',
+  },
+  {
+    id: 'hibiscus',
+    name: 'Hibiscus',
+    type: 'Face & Body Mist',
+    size: '100 ml',
+    essence: 'Crimson petals — a natural tonic that brightens and firms.',
+    description:
+      'Steam-distilled floral water from fresh hibiscus flowers. 100% pure and natural hydrosol, rich in naturally occurring alpha hydroxy acids (AHAs).',
+    storage: STORAGE,
+    benefits: [
+      'Hydrates and nourishes dry skin',
+      'Naturally tones and tightens pores',
+      'Helps balance the skin’s pH',
+      'Supports brighter, more even-looking skin',
+    ],
+    image: '/lag/hibiscus.svg',
+    accent: '#b8496a',
+    tint: '#f0d4dd',
+  },
+  {
+    id: 'chamomile',
+    name: 'Chamomile',
+    type: 'Face & Body Mist',
+    size: '100 ml',
+    essence: 'Golden calm — the gentlest water for reactive skin.',
+    description:
+      'Steam-distilled floral water from fresh chamomile flowers. 100% pure and natural hydrosol — alcohol-free, vegan, and gentle for everyday use.',
+    storage: STORAGE,
+    benefits: [
+      'Helps soothe acne-prone skin',
+      'Relieves skin redness and itchiness',
+      'Hydrates and refreshes the skin',
+      'Acts as a gentle facial toner',
+    ],
+    image: '/lag/chamomile.svg',
+    accent: '#c9a83f',
+    tint: '#f0e8c8',
   },
 ]

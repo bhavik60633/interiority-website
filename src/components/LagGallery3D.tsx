@@ -18,11 +18,11 @@ import LagWordmark from './LagWordmark'
   scroll zone) so the text never overlaps the images — on mobile or desktop.
 */
 
-// Eight single-bottle shots across three columns (3 / 3 / 2).
+// Twelve single-bottle shots across three columns (4 / 4 / 4).
 const columns: LagProduct[][] = [
-  [lagProducts[0], lagProducts[3], lagProducts[6]],
-  [lagProducts[1], lagProducts[4], lagProducts[7]],
-  [lagProducts[2], lagProducts[5]],
+  [lagProducts[0], lagProducts[3], lagProducts[6], lagProducts[9]],
+  [lagProducts[1], lagProducts[4], lagProducts[7], lagProducts[10]],
+  [lagProducts[2], lagProducts[5], lagProducts[8], lagProducts[11]],
 ]
 
 const yRanges: string[][] = [
@@ -58,7 +58,7 @@ function Bottle({ p }: { p: LagProduct }) {
 
 interface LagGallery3DProps {
   /* Set false on pages that already show a fuller heading elsewhere (e.g. /lag,
-     where LagTimeline immediately follows with its own "Ten botanical waters..."
+     where LagTimeline immediately follows with its own "Botanical waters..."
      heading) — avoids showing the same headline twice on one page. */
   showHeading?: boolean
 }
@@ -74,7 +74,7 @@ export default function LagGallery3D({ showHeading = true }: LagGallery3DProps) 
           </ContainerAnimated>
           <ContainerAnimated>
             <h2 className="font-display text-[32px] sm:text-[44px] md:text-[62px] font-semibold leading-[1.05] tracking-[0.02em] text-on-surface">
-              Ten botanical waters, distilled to their most honest form.
+              Botanical waters, distilled to their most honest form.
             </h2>
           </ContainerAnimated>
           <ContainerAnimated className="font-sans text-[13px] md:text-[16px] text-on-surface-variant leading-[1.8] max-w-[520px] mx-auto mt-6">

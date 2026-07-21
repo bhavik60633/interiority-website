@@ -42,7 +42,7 @@ export default function LagTimeline() {
           <LagWordmark size="sm" align="left" tagline={false} />
         </div>
         <h2 className="font-display text-[34px] md:text-[52px] font-semibold leading-[1.08] tracking-[0.02em] text-on-surface max-w-[720px]">
-          Ten botanical waters, distilled to their most honest form.
+          Botanical waters, distilled to their most honest form.
         </h2>
         <p className="font-sans text-[14px] md:text-[16px] text-on-surface-variant leading-[1.8] max-w-[560px] mt-6">
           Each Lăg hydrosol is steam-distilled from a single flower, leaf, or root —
@@ -113,8 +113,11 @@ export default function LagTimeline() {
                 {/* Essence + benefits */}
                 <div className="lg:w-[54%] lg:pt-3">
                   <span className="inline-block w-8 h-px mb-6" style={{ backgroundColor: p.accent }} />
-                  <p className="font-display italic text-[19px] md:text-[23px] text-on-surface/80 leading-[1.45] mb-8">
+                  <p className="font-display italic text-[19px] md:text-[23px] text-on-surface/80 leading-[1.45] mb-4">
                     {p.essence}
+                  </p>
+                  <p className="font-sans text-[13px] md:text-[14px] text-on-surface-variant/90 leading-[1.7] mb-7 max-w-[440px]">
+                    {p.description}
                   </p>
                   <ul className="flex flex-col gap-4">
                     {p.benefits.map((b) => (
@@ -129,6 +132,9 @@ export default function LagTimeline() {
                       </li>
                     ))}
                   </ul>
+                  <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-on-surface-variant/45 mt-7">
+                    Storage · {p.storage}
+                  </p>
                 </div>
               </div>
             </div>
