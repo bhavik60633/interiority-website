@@ -18,13 +18,11 @@ import LagWordmark from './LagWordmark'
   scroll zone) so the text never overlaps the images — on mobile or desktop.
 */
 
-// Nine single-bottle shots across three columns (3 / 3 / 3).
-// Calendula (index 9) is omitted here — its boxed composition doesn't crop
-// cleanly in the gallery. It still appears in the detailed timeline.
+// Eight single-bottle shots across three columns (3 / 3 / 2).
 const columns: LagProduct[][] = [
   [lagProducts[0], lagProducts[3], lagProducts[6]],
   [lagProducts[1], lagProducts[4], lagProducts[7]],
-  [lagProducts[2], lagProducts[5], lagProducts[8]],
+  [lagProducts[2], lagProducts[5]],
 ]
 
 const yRanges: string[][] = [

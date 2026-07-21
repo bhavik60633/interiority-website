@@ -46,21 +46,6 @@ export const lagProducts: LagProduct[] = [
     tint: '#f0d9db',
   },
   {
-    id: 'lavender',
-    name: 'Lavender',
-    type: 'Hydrosol',
-    size: '30 ml',
-    essence: 'A quiet field at dusk, distilled into a single calming note.',
-    benefits: [
-      'Calms the mind and eases tension before rest',
-      'Soothes irritation and post-sun warmth',
-      'Balances oil for clearer, settled skin',
-    ],
-    image: '/lag/lavender.png',
-    accent: '#8b7bb0',
-    tint: '#e3ddf0',
-  },
-  {
     id: 'sandalwood',
     name: 'Sandalwood',
     type: 'Hydrosol',
@@ -149,20 +134,5 @@ export const lagProducts: LagProduct[] = [
     image: '/lag/jasmine.png',
     accent: '#b0913f',
     tint: '#ece2cd',
-  },
-  {
-    id: 'calendula',
-    name: 'Calendula',
-    type: 'Hydrosol',
-    size: '30 ml',
-    essence: 'Marigold water — the gentlest care for delicate skin.',
-    benefits: [
-      'Calms sensitive and reactive skin',
-      'Soothes and comforts minor irritation',
-      'Supports the skin’s natural recovery',
-    ],
-    image: '/lag/calendula.png',
-    accent: '#d59a3f',
-    tint: '#f0dcb2',
   },
 ]
