@@ -14,32 +14,32 @@ export interface Service {
 export const services: Service[] = [
   {
     num: '01',
-    title: 'Design Consulting',
-    desc: 'End-to-end design consulting for five-star hotels, luxury spas, private clubs, resorts, and fine-dining restaurants — from spatial concept to the final guest touchpoint.',
+    title: 'Design Consulting and Concept Creation',
+    desc: 'End-to-end design consulting and concept creation for five-star hotels, luxury spas, private clubs, resorts, and fine-dining restaurants, from spatial vision to the final guest touchpoint.',
     img: furnitureMarble,
   },
   {
     num: '02',
-    title: 'Amenity Boxes & Guestroom Objects',
-    desc: 'Bespoke amenity boxes, trays, leather paper holders, tissue boxes, bathroom sets, and guest-use objects designed to elevate the guest experience.',
+    title: 'Customised Essentials',
+    desc: 'Bespoke amenity boxes, trays, leather paper holders, tissue boxes, bathroom sets, and guest-use essentials, customised to elevate every moment of the stay.',
     img: tissueBoxTan,
   },
   {
     num: '03',
-    title: 'Glassware, Vases & Decorative Accessories',
-    desc: 'Luxury glasses, bowls, vases, trays, candleholders, sculptural accents, and tabletop products curated for hospitality excellence.',
+    title: 'Decorative Accents and Artefacts',
+    desc: 'Glassware, vases, bowls, candleholders, sculptural artefacts, and tabletop accents, curated for hospitality excellence.',
     img: vaseCrystalSet,
   },
   {
     num: '04',
-    title: 'Interior Styling & Spatial Design',
-    desc: 'Warm, precise, layered interiors — styled with curated artifacts, candles, and glassware — for suites, spas, lounges, private clubs, resorts, and arrival zones.',
+    title: 'Interior Styling',
+    desc: 'Warm, precise, layered interior styling, dressed with curated artefacts, candles, and glassware, for suites, spas, lounges, private clubs, resorts, and arrival zones.',
     img: decorativeAccents,
   },
   {
     num: '05',
-    title: 'Product Development & Procurement',
-    desc: 'From concept to sample to final production — refined products that match hotel standards and brand identity.',
+    title: 'Quality Check, Installation and Aftercare',
+    desc: 'Meticulous quality checks, on-site installation, and attentive aftercare, ensuring every piece is delivered and maintained to a five-star standard.',
     img: essentials,
   },
 ]

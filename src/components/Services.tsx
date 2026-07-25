@@ -31,7 +31,7 @@ export default function Services({ variant = 'full', limit, ctaHref = '/services
           <div className="flex-1 h-[1.5px] bg-gradient-to-l from-transparent via-brass/40 to-brass/20" />
         </motion.div>
 
-        {/* Header — headline left, tagline right */}
+        {/* Header, headline left, tagline right */}
         <motion.div
           className="flex flex-col lg:flex-row lg:items-end lg:gap-16 mb-14 md:mb-20"
           initial={{ opacity: 0, y: 40 }}
@@ -39,13 +39,13 @@ export default function Services({ variant = 'full', limit, ctaHref = '/services
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex-1">
-            <span className="font-sans text-[10px] font-semibold tracking-[0.25em] uppercase text-dusty-rose mb-4 block">
+            <span className="font-sans text-[13px] md:text-[16px] font-semibold tracking-[0.25em] uppercase text-primary mb-4 block">
               What We Do
             </span>
-            <h2 className="font-display text-[32px] sm:text-[44px] md:text-[56px] lg:text-[68px] font-semibold leading-[1.05] tracking-[0.02em]">
-              <span className="text-on-surface">FULL‑SPECTRUM</span>
+            <h2 className="font-display text-[32px] sm:text-[44px] md:text-[56px] lg:text-[68px] font-semibold leading-[1.05] tracking-[0.02em] text-primary">
+              FULL‑SPECTRUM
               <br />
-              <span className="text-primary">HOSPITALITY DESIGN</span>
+              HOSPITALITY DESIGN
             </h2>
           </div>
           <div className="hidden lg:flex items-center gap-8 pb-5 shrink-0">

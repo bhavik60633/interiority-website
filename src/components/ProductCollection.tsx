@@ -42,8 +42,8 @@ export default function ProductCollection({ variant = 'full', limit, ctaHref = '
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          From leather desk accessories to glassware, amenity systems and
-          decorative accents — every detail is designed to feel intentional.
+          From leather desk accessories to glassware, Amenities System and
+          decorative accents, every detail is designed to feel intentional.
         </motion.p>
 
         {/* Product grid */}

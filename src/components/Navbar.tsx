@@ -54,7 +54,7 @@ export default function Navbar() {
           : 'h-20 bg-transparent'
       }`}
     >
-      {/* Contrast scrim — keeps light text legible over bright hero images */}
+      {/* Contrast scrim, keeps light text legible over bright hero images */}
       <div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent transition-opacity duration-500 ${

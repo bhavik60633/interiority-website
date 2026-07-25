@@ -8,6 +8,14 @@ import floralArrangement from '../assets/floral-arrangement.png'
 import bathroomSet from '../assets/bathroom-set.png'
 import coverTablescape from '../assets/new/cover-tablescape.jpg'
 import vaseAmberGold from '../assets/new/vase-amber-gold.jpg'
+import vaseGreenGlass from '../assets/new/vase-green-glass.jpg'
+import wallArtBirds from '../assets/new/wall-art-birds.jpg'
+import candleStandFlower from '../assets/new/candle-stand-flower.jpg'
+import vasePinkCrystalPair from '../assets/new/vase-pink-crystal-pair.jpg'
+import vignetteAmberJars from '../assets/new/vignette-amber-jars.jpg'
+import traySilverBowlMug from '../assets/new/tray-silver-bowl-mug.jpg'
+import organizerJewelryBox from '../assets/new/organizer-jewelry-box.jpg'
+import bowlGlassPotpourri from '../assets/new/bowl-glass-potpourri.jpg'
 
 export interface GalleryItem {
   title: string
@@ -27,4 +35,12 @@ export const galleryItems: GalleryItem[] = [
   { title: 'Bathroom Set', category: 'Vanity Accessories', material: 'STONE', photo: bathroomSet },
   { title: 'Five-Star Suite', category: 'Interior Styling', material: 'LINEN', photo: coverTablescape },
   { title: 'Artisan Vase', category: 'Decorative Object', material: 'GLASS AND METAL', photo: vaseAmberGold },
+  { title: 'Emerald Vase', category: 'Decorative Object', material: 'GLASS', photo: vaseGreenGlass },
+  { title: 'Swallows Wall Mural', category: 'Metal Wall Décor', material: 'BRASS', photo: wallArtBirds },
+  { title: 'Bloom Candle Stand', category: 'Tabletop Accent', material: 'BRASS', photo: candleStandFlower },
+  { title: 'Crystal Vase Pair', category: 'Arrival Styling', material: 'CRYSTAL', photo: vasePinkCrystalPair },
+  { title: 'Amber Storage Jars', category: 'Vanity Vignette', material: 'GLASS', photo: vignetteAmberJars },
+  { title: 'Serving Ensemble', category: 'Lounge Accessory', material: 'LEATHER', photo: traySilverBowlMug },
+  { title: 'Vanity Organiser', category: 'Bedside Essential', material: 'LEATHER', photo: organizerJewelryBox },
+  { title: 'Potpourri Bowl', category: 'Fragrance Accent', material: 'GLASS', photo: bowlGlassPotpourri },
 ]

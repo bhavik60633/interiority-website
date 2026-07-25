@@ -15,7 +15,7 @@ import TermsPage from './pages/TermsPage'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
-    // Only jump to top on a real page change — preserve #section anchor links.
+    // Only jump to top on a real page change, preserve #section anchor links.
     if (!window.location.hash) window.scrollTo(0, 0)
   }, [pathname])
   return null

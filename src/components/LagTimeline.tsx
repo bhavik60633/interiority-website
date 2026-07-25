@@ -4,15 +4,15 @@ import { lagProducts } from '../data/lagProducts'
 import LagWordmark from './LagWordmark'
 
 /*
-  LĂG timeline — a premium scroll-reveal (adapted from the Aceternity Timeline
+  LĂG timeline, a premium scroll-reveal (adapted from the Aceternity Timeline
   pattern to this Vite + Tailwind v4 + `motion` codebase, and re-themed).
 
-  • Each product is a continuously-visible block — no crossfade, so there is no
+  • Each product is a continuously-visible block, no crossfade, so there is no
     blank "plank" between products.
   • A sticky product name/number holds on the left while its content scrolls past.
   • An animated brass→primary progress line fills as you move through the collection.
   • Each product's own colour appears only as refined accents (node, eyebrow, rule,
-    a soft wash behind the bottle) — never as a jarring full-background flip.
+    a soft wash behind the bottle), never as a jarring full-background flip.
 */
 
 export default function LagTimeline() {
@@ -45,7 +45,7 @@ export default function LagTimeline() {
           Botanical waters, distilled to their most honest form.
         </h2>
         <p className="font-sans text-[14px] md:text-[16px] text-on-surface-variant leading-[1.8] max-w-[560px] mt-6">
-          Each Lăg hydrosol is steam-distilled from a single flower, leaf, or root —
+          Each Lăg hydrosol is steam-distilled from a single flower, leaf, or root,
           no synthetics, no pretence. Scroll through the collection; every water is
           made for a mood, a ritual, and a certain kind of skin.
         </p>
@@ -54,7 +54,7 @@ export default function LagTimeline() {
       <div ref={ref} className="relative max-w-[1200px] mx-auto pb-24 px-6 md:px-0">
         {lagProducts.map((p, i) => (
           <div key={p.id} className="flex justify-start pt-14 md:pt-32 md:gap-10">
-            {/* Sticky left — node + name */}
+            {/* Sticky left, node + name */}
             <div className="sticky top-32 md:top-40 self-start z-30 flex flex-col md:flex-row items-start md:items-center max-w-[80px] md:max-w-sm md:w-full">
               <div className="h-10 w-10 rounded-full bg-surface flex items-center justify-center absolute left-0 md:left-1 shadow-[0_2px_10px_rgba(42,40,38,0.08)]">
                 <span
@@ -78,7 +78,7 @@ export default function LagTimeline() {
               </div>
             </div>
 
-            {/* Right — content */}
+            {/* Right, content */}
             <div className="relative pl-16 md:pl-4 w-full">
               {/* Mobile header */}
               <div className="md:hidden mb-5">

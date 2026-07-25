@@ -1,4 +1,4 @@
-// LĂG — botanical hydrosols & body mists.
+// LĂG, botanical hydrosols & body mists.
 // Names/types/sizes are taken from the product labels; description, storage and
 // benefit copy are from the brand's product sheet for each botanical water.
 
@@ -45,7 +45,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Rose',
     type: 'Face & Body Mist',
     sizes: SIZES,
-    essence: 'Steam-distilled petals — the most forgiving water for the skin.',
+    essence: 'Steam-distilled petals, the most forgiving water for the skin.',
     description:
       'Steam-distilled floral water obtained from rose petals. 100% pure and natural hydrosol, alcohol-free and suitable for everyday skincare.',
     storage: STORAGE,
@@ -64,9 +64,9 @@ export const lagProducts: LagProduct[] = [
     name: 'Sandalwood',
     type: 'Body Mist',
     sizes: SIZES,
-    essence: 'Grounding chandan — warmth, stillness, and old ceremony.',
+    essence: 'Grounding chandan, warmth, stillness, and old ceremony.',
     description:
-      'Steam-distilled floral water obtained from sandalwood bark. 100% pure and natural hydrosol — alcohol-free, vegan, and cruelty-free.',
+      'Steam-distilled floral water obtained from sandalwood bark. 100% pure and natural hydrosol, alcohol-free, vegan, and cruelty-free.',
     storage: STORAGE,
     benefits: [
       'Moisturizes and hydrates the skin',
@@ -83,7 +83,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Helichrysum',
     type: 'Body & Face Mist',
     sizes: SIZES,
-    essence: 'The “everlasting” flower — restorative and rare.',
+    essence: 'The “everlasting” flower, restorative and rare.',
     description:
       'Steam-distilled botanical water from the flowering tops of the helichrysum plant. 100% pure and natural hydrosol, gentle enough for direct application.',
     storage: STORAGE,
@@ -102,9 +102,9 @@ export const lagProducts: LagProduct[] = [
     name: 'Neroli',
     type: 'Body Mist',
     sizes: SIZES,
-    essence: 'Orange blossom at first light — bright and lifting.',
+    essence: 'Orange blossom at first light, bright and lifting.',
     description:
-      'Steam-distilled floral water from neroli (bitter orange blossom). 100% pure and natural hydrosol — alcohol-free, vegan, and cruelty-free.',
+      'Steam-distilled floral water from neroli (bitter orange blossom). 100% pure and natural hydrosol, alcohol-free, vegan, and cruelty-free.',
     storage: STORAGE,
     benefits: [
       'Deeply cleanses and refreshes the skin',
@@ -121,7 +121,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Coffee',
     type: 'Face & Body Mist',
     sizes: SIZES,
-    essence: 'Roasted warmth — an unexpected, energising ritual.',
+    essence: 'Roasted warmth, an unexpected, energising ritual.',
     description:
       'Botanical water infused with roasted coffee. 100% pure and natural, alcohol-free, and rich in naturally occurring antioxidants.',
     storage: STORAGE,
@@ -139,7 +139,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Rose Hip',
     type: 'Face & Body Mist',
     sizes: SIZES,
-    essence: 'The fruit after the flower — nourishing and reviving.',
+    essence: 'The fruit after the flower, nourishing and reviving.',
     description:
       'Steam-distilled botanical water obtained from rose hips. 100% pure and natural hydrosol, rich in naturally occurring vitamins A, C, and essential fatty acids.',
     storage: STORAGE,
@@ -158,7 +158,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Jasmine',
     type: 'Hydrosol',
     sizes: SIZES,
-    essence: 'Queen of the night — sensuous, comforting, unmistakable.',
+    essence: 'Queen of the night, sensuous, comforting, unmistakable.',
     description:
       'Steam-distilled floral water obtained from jasmine flowers. 100% pure and natural hydrosol, free from preservatives or emulsifiers.',
     storage: STORAGE,
@@ -196,7 +196,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Calendula',
     type: 'Hydrosol',
     sizes: SIZES,
-    essence: 'Marigold water — the gentlest care for delicate skin.',
+    essence: 'Marigold water, the gentlest care for delicate skin.',
     description:
       'Steam-distilled floral water from fresh calendula flowers. 100% pure and natural hydrosol, gentle enough for direct application to the skin.',
     storage: STORAGE,
@@ -215,7 +215,7 @@ export const lagProducts: LagProduct[] = [
     name: 'Hibiscus',
     type: 'Face & Body Mist',
     sizes: SIZES,
-    essence: 'Crimson petals — a natural tonic that brightens and firms.',
+    essence: 'Crimson petals, a natural tonic that brightens and firms.',
     description:
       'Steam-distilled floral water from fresh hibiscus flowers. 100% pure and natural hydrosol, rich in naturally occurring alpha hydroxy acids (AHAs).',
     storage: STORAGE,
@@ -234,9 +234,9 @@ export const lagProducts: LagProduct[] = [
     name: 'Chamomile',
     type: 'Face & Body Mist',
     sizes: SIZES,
-    essence: 'Golden calm — the gentlest water for reactive skin.',
+    essence: 'Golden calm, the gentlest water for reactive skin.',
     description:
-      'Steam-distilled floral water from fresh chamomile flowers. 100% pure and natural hydrosol — alcohol-free, vegan, and gentle for everyday use.',
+      'Steam-distilled floral water from fresh chamomile flowers. 100% pure and natural hydrosol, alcohol-free, vegan, and gentle for everyday use.',
     storage: STORAGE,
     benefits: [
       'Helps soothe acne-prone skin',

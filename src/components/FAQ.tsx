@@ -4,11 +4,11 @@ import { motion, useInView } from 'motion/react'
 const faqs = [
   {
     q: 'Are product colors exactly as shown?',
-    a: 'We reproduce colors as accurately as photography and screens allow, but natural materials like leather, glass, brass, and marble carry inherent variation — no two pieces are perfectly identical. For hospitality orders above a set volume, we can arrange physical samples before production.',
+    a: 'We reproduce colors as accurately as photography and screens allow, but natural materials like leather, glass, brass, and marble carry inherent variation, no two pieces are perfectly identical. For hospitality orders above a set volume, we can arrange physical samples before production.',
   },
   {
     q: 'How can I contact customer support?',
-    a: 'Reach our team directly by phone or email — details are on our Contact page — or use the WhatsApp button in the navigation for a quicker response. We typically reply within 24 hours on business days.',
+    a: 'Reach our team directly by phone or email, details are on our Contact page, or use the WhatsApp button in the navigation for a quicker response. We typically reply within 24 hours on business days.',
   },
   {
     q: 'Are dimensions accurate?',
@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     q: 'What are your delivery timelines?',
-    a: 'In-stock accessories typically ship within 7–10 business days. Custom or bulk hospitality orders (amenity sets, bespoke furniture, large installations) follow a project timeline agreed at the start, usually 3–8 weeks depending on scope.',
+    a: 'In-stock accessories typically ship within 7,10 business days. Custom or bulk hospitality orders (amenity sets, bespoke furniture, large installations) follow a project timeline agreed at the start, usually 3,8 weeks depending on scope.',
   },
   {
     q: 'Can I cancel or modify my order?',
-    a: 'Standard orders can be modified or cancelled within 24 hours of confirmation. Custom and made-to-order pieces can be adjusted before production starts; once production begins, changes are handled case by case — reach out to our team as early as possible.',
+    a: 'Standard orders can be modified or cancelled within 24 hours of confirmation. Custom and made-to-order pieces can be adjusted before production starts; once production begins, changes are handled case by case, reach out to our team as early as possible.',
   },
 ]
 
@@ -49,7 +49,7 @@ export default function FAQ() {
             </h2>
           </div>
           <p className="font-sans text-[14px] md:text-[15px] text-on-surface-variant leading-[1.8] max-w-[520px] lg:pt-12">
-            Everything you need to know about working with Interiority —
+            Everything you need to know about working with Interiority,
             from project scope and pricing to creative direction and
             hospitality-specific digital strategy.
           </p>

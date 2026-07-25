@@ -9,8 +9,8 @@ interface LagWordmarkProps {
   LĂG brand lockup, recreated in code to match the mark shown on the product
   labels and intro video: the Gurmukhi (Punjabi) glyph "ਲਾਗ" in a deep maroon
   serif, the Latin "Lăg" wordmark beneath it, and the tagline in small tracked
-  caps. "Lăg" is a Punjabi word — the logo uses Gurmukhi script throughout.
-  No standalone logo file exists for this brand — this is the faithful
+  caps. "Lăg" is a Punjabi word, the logo uses Gurmukhi script throughout.
+  No standalone logo file exists for this brand, this is the faithful
   in-code reproduction requested in place of one.
 */
 export default function LagWordmark({ size = 'md', align = 'center', tagline = true, dark = false }: LagWordmarkProps) {

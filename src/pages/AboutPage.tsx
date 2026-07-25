@@ -14,7 +14,7 @@ import heroImg from '../assets/console-styling.png'
 const values = [
   { title: 'Craftsmanship Over Mass Production', desc: 'Every object passes through the hands of skilled artisans. We choose slow craft over fast manufacturing because guest experiences deserve that difference.' },
   { title: 'Design With Intention', desc: 'Nothing decorative without purpose. Every material, proportion, and finish is chosen to serve the space, the brand, and the guest who will use it.' },
-  { title: 'Hospitality at the Core', desc: 'We are not a general interior firm that happens to work with hotels. Hospitality is our only domain — we understand the operational, aesthetic, and experiential standards it demands.' },
+  { title: 'Hospitality at the Core', desc: 'We are not a general interior firm that happens to work with hotels. Hospitality is our only domain, we understand the operational, aesthetic, and experiential standards it demands.' },
   { title: 'Lasting Relationships', desc: 'We build long-term partnerships with properties, returning for seasonal refreshes, new wing rollouts, and product evolution as your brand grows.' },
 ]
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
           eyebrow="About Interiority"
           title="Elegance Is Found"
           subtitle="In Attention to Detail"
-          description="We are a hospitality-focused design studio based in Delhi, India — specializing in luxury interiors, bespoke amenity systems, and curated decor objects for five-star hotels, resorts, spas, and private clubs worldwide."
+          description="We are a hospitality-focused design studio based in Delhi, India, specializing in luxury interiors, bespoke Amenities System, and curated decor objects for five-star hotels, resorts, spas, and private clubs worldwide."
           image={heroImg}
         />
         <CompanyStory />
@@ -102,7 +102,7 @@ function AboutCTA() {
             Ready to Elevate Your Property?
           </h3>
           <p className="font-sans text-[13px] md:text-[15px] text-inverse-on-surface/50 leading-[1.7] mb-10 max-w-[500px] mx-auto">
-            From a single consultation to a complete design partnership — we are here to shape the details your guests will notice.
+            From a single consultation to a complete design partnership, we are here to shape the details your guests will notice.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

@@ -5,7 +5,7 @@ export interface LifestyleCategory {
   description: string
 }
 
-// The four spaces Interiority designs for — shown as a single pre-composed
+// The four spaces Interiority designs for, shown as a single pre-composed
 // panel image (already labeled) sourced from the brand deck, alongside
 // individual descriptive text.
 export const lifestyleImage = lifestylePanel
@@ -17,11 +17,11 @@ export const lifestyleCategories: LifestyleCategory[] = [
   },
   {
     title: 'Luxury Hospitality',
-    description: 'Five-star hotels, resorts, and hospitality groups — arrival experiences to guestroom detail.',
+    description: 'Five-star hotels, resorts, and hospitality groups, arrival experiences to guestroom detail.',
   },
   {
     title: 'Wellness & Spa',
-    description: 'Spas and wellness retreats designed for calm — candles, textiles, and considered objects.',
+    description: 'Spas and wellness retreats designed for calm, candles, textiles, and considered objects.',
   },
   {
     title: 'Retail & Commercial Spaces',

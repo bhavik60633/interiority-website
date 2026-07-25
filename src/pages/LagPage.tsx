@@ -16,7 +16,7 @@ const rituals = [
   {
     step: '02',
     title: 'Tone & Hydrate',
-    desc: 'Use as a natural toner — the botanical water balances pH, tightens pores, and delivers a layer of plant-based hydration.',
+    desc: 'Use as a natural toner, the botanical water balances pH, tightens pores, and delivers a layer of plant-based hydration.',
   },
   {
     step: '03',
@@ -26,10 +26,10 @@ const rituals = [
 ]
 
 const principles = [
-  { title: 'Single-Origin Botanicals', desc: 'Each hydrosol is distilled from one plant — no blending, no shortcuts. What you smell is the plant itself.' },
+  { title: 'Single-Origin Botanicals', desc: 'Each hydrosol is distilled from one plant, no blending, no shortcuts. What you smell is the plant itself.' },
   { title: 'Steam-Distilled Purity', desc: 'Traditional copper-still distillation at low temperatures preserves the full aromatic profile and active compounds.' },
   { title: 'No Synthetics, No Pretence', desc: 'Zero preservatives, zero synthetic fragrances, zero fillers. Just the water the plant leaves behind.' },
-  { title: 'Designed for Hospitality', desc: 'Packaging, formulation, and pricing are built for hotels, spas, and wellness properties — not just retail shelves.' },
+  { title: 'Designed for Hospitality', desc: 'Packaging, formulation, and pricing are built for hotels, spas, and wellness properties, not just retail shelves.' },
 ]
 
 export default function LagPage() {
@@ -68,7 +68,7 @@ export default function LagPage() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 1, delay: 0.25 }}
             >
-              Lăg is the quiet pull between a flower and the water it leaves behind —
+              Lăg is the quiet pull between a flower and the water it leaves behind,
               an attachment that forms on its own, without asking. Each hydrosol is
               steam-distilled from a single botanical and bottled at its most honest:
               no synthetics, no pretence, only the essence of the plant and the skin

@@ -9,12 +9,12 @@ import Contact from '../components/Contact'
 import heroImg from '../assets/bedside-styling.png'
 
 const categories = [
-  { name: 'Leather Goods', desc: 'Paper holders, amenity boxes, trays, watch boxes, and waste bins — crafted in premium leather and leatherite.' },
+  { name: 'Leather Goods', desc: 'Paper holders, amenity boxes, trays, watch boxes, and waste bins, crafted in premium leather and leatherite.' },
   { name: 'Glassware & Crystal', desc: 'Tumblers, champagne coupes, decanters, and decorative vases in hand-blown crystal and artisan glass.' },
   { name: 'Bathroom & Amenity Sets', desc: 'Soap dispensers, tissue boxes, vanity trays, and complete bathroom accessory sets in marble, stone, and brass.' },
   { name: 'Lighting & Candles', desc: 'Table lamps, candle stands, diffusers, and ambient lighting designed for guest suites and lounge spaces.' },
   { name: 'Decorative Accents', desc: 'Metal murals, sculptural objects, planters, and art pieces that bring character to every corner.' },
-  { name: 'Custom & Bespoke', desc: 'Made-to-order products developed from concept to production — matched to your brand identity and hotel standards.' },
+  { name: 'Custom & Bespoke', desc: 'Made-to-order products developed from concept to production, matched to your brand identity and hotel standards.' },
 ]
 
 export default function ProductsPage() {
@@ -26,7 +26,7 @@ export default function ProductsPage() {
           eyebrow="Our Products"
           title="Objects That Complete"
           subtitle="The Stay"
-          description="Every piece in our collection is designed for luxury hospitality — crafted from premium materials, built to hotel-grade standards, and refined to feel intentional in every setting."
+          description="Every piece in our collection is designed for luxury hospitality, crafted from premium materials, built to hotel-grade standards, and refined to feel intentional in every setting."
           image={heroImg}
         />
         <CategoryOverview />

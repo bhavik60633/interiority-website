@@ -15,7 +15,7 @@ import LagWordmark from './LagWordmark'
   scroll, with the three columns parallaxing at different speeds.
 
   The intro copy sits in its OWN block above the gallery (not inside the sticky
-  scroll zone) so the text never overlaps the images — on mobile or desktop.
+  scroll zone) so the text never overlaps the images, on mobile or desktop.
 */
 
 // Twelve single-bottle shots across three columns (4 / 4 / 4).
@@ -59,14 +59,14 @@ function Bottle({ p }: { p: LagProduct }) {
 interface LagGallery3DProps {
   /* Set false on pages that already show a fuller heading elsewhere (e.g. /lag,
      where LagTimeline immediately follows with its own "Botanical waters..."
-     heading) — avoids showing the same headline twice on one page. */
+     heading), avoids showing the same headline twice on one page. */
   showHeading?: boolean
 }
 
 export default function LagGallery3D({ showHeading = true }: LagGallery3DProps) {
   return (
     <div className="bg-surface">
-      {/* Intro copy — its own block, blurs in with a stagger. */}
+      {/* Intro copy, its own block, blurs in with a stagger. */}
       {showHeading && (
         <ContainerStagger className="px-6 pt-24 md:pt-36 pb-10 md:pb-16 text-center max-w-[900px] mx-auto">
           <ContainerAnimated className="mb-6 flex justify-center">
@@ -78,13 +78,13 @@ export default function LagGallery3D({ showHeading = true }: LagGallery3DProps) 
             </h2>
           </ContainerAnimated>
           <ContainerAnimated className="font-sans text-[13px] md:text-[16px] text-on-surface-variant leading-[1.8] max-w-[520px] mx-auto mt-6">
-            Steam-distilled from a single flower, leaf, or root — no synthetics, no
+            Steam-distilled from a single flower, leaf, or root, no synthetics, no
             pretence. Scroll to bring the collection into view.
           </ContainerAnimated>
         </ContainerStagger>
       )}
 
-      {/* Tilting 3D gallery — sticky zone, separate from the copy above. */}
+      {/* Tilting 3D gallery, sticky zone, separate from the copy above. */}
       <ContainerScroll className={`min-h-[140vh] ${showHeading ? '' : 'pt-16 md:pt-24'}`}>
         <ContainerSticky className="h-screen">
           <GalleryContainer className="mx-auto max-w-[1120px] px-6 py-[8vh]">

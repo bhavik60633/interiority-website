@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'Grand Lobby',
     label: 'Spatial Design',
     size: 'large',
-    description: 'A full arrival-experience redesign — warm materials, layered lighting, and curated objects that set the tone the moment a guest steps through the door.',
+    description: 'A full arrival-experience redesign, warm materials, layered lighting, and curated objects that set the tone the moment a guest steps through the door.',
   },
   {
     img: luxurySuite,
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: 'Console Styling',
     label: 'Arrival Experience',
     size: 'medium',
-    description: 'Console and vignette styling for arrival zones — florals, objects, and lighting composed to feel effortless.',
+    description: 'Console and vignette styling for arrival zones, florals, objects, and lighting composed to feel effortless.',
   },
   {
     img: hotelExterior,
@@ -47,13 +47,13 @@ export const projects: Project[] = [
     title: 'Luxury Lounge',
     label: 'Textile & Spatial',
     size: 'medium',
-    description: 'A lounge redesign built around texture — rugs, upholstery, and soft furnishing chosen to slow guests down.',
+    description: 'A lounge redesign built around texture, rugs, upholstery, and soft furnishing chosen to slow guests down.',
   },
   {
     img: bedsideStyling,
     title: 'Bedside Styling',
     label: 'Guest Room Detail',
     size: 'medium',
-    description: 'The small details of a guest room — bedside objects, lighting, and finishing touches that guests remember.',
+    description: 'The small details of a guest room, bedside objects, lighting, and finishing touches that guests remember.',
   },
 ]

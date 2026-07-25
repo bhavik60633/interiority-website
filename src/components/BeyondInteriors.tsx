@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useInView } from 'motion/react'
 import hotelLobby from '../assets/hotel-lobby.png'
 
 const stats = [
-  { value: '200', suffix: '+', label: 'Hospitality Objects & Spatial Details' },
+  { value: '1000', suffix: '+', label: 'Hospitality Objects & Spatial Details' },
   { value: '30', suffix: '+', label: 'Product & Design Categories' },
   { value: '12', suffix: '+', label: 'Years Shaping Refined Guest Experiences' },
   { text: 'Pan India + Global', label: 'Reach & Presence' },
@@ -46,14 +46,14 @@ export default function BeyondInteriors() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-warm-charcoal/60 via-transparent to-warm-charcoal/80" />
 
-      {/* Scroll-zoom wrapper — entire content zooms in on scroll */}
+      {/* Scroll-zoom wrapper, entire content zooms in on scroll */}
       <motion.div
         className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-20 py-32 md:py-48"
         style={{ scale: zoomScale, opacity: zoomOpacity }}
       >
         {/* Editorial heading */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-24 md:mb-32">
-          {/* BEYOND INTERIORS — slides from left */}
+          {/* BEYOND INTERIORS, slides from left */}
           <motion.h2
             className="font-display text-[36px] md:text-[56px] lg:text-[72px] font-semibold leading-[1.05] tracking-[0.02em] text-inverse-on-surface/90"
             initial={{ opacity: 0, x: -120 }}
@@ -65,7 +65,7 @@ export default function BeyondInteriors() {
             INTERIORS
           </motion.h2>
 
-          {/* INTO EXPERIENCE — slides from right */}
+          {/* INTO EXPERIENCE, slides from right */}
           <motion.h2
             className="font-display text-[36px] md:text-[56px] lg:text-[72px] font-semibold leading-[1.05] tracking-[0.02em] text-dusty-rose/80 md:text-right"
             initial={{ opacity: 0, x: 120 }}

@@ -34,16 +34,6 @@ export default function Trust() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Hilton mention — understated plaque style */}
-          <div className="flex flex-col items-center gap-3 px-8 py-6 border border-outline-variant/30 rounded-[4px] bg-surface-container-lowest/50 backdrop-blur-sm">
-            <span className="font-display text-[18px] md:text-[22px] font-medium text-on-surface tracking-[0.02em]">
-              Hilton Hotels Group
-            </span>
-            <span className="font-sans text-[9px] tracking-[0.2em] uppercase text-outline">
-              Featured Client Partnership
-            </span>
-          </div>
-
           <div className="flex flex-col items-center gap-3 px-8 py-6 border border-outline-variant/30 rounded-[4px] bg-surface-container-lowest/50 backdrop-blur-sm">
             <span className="font-display text-[18px] md:text-[22px] font-medium text-on-surface tracking-[0.02em]">
               Hyatt Chain of Hotels
@@ -82,11 +72,11 @@ export default function Trust() {
           <p className="font-display text-[18px] md:text-[22px] italic text-on-surface leading-[1.6] tracking-[0.01em]">
             "The attention to material, proportion, and guest psychology in
             every object they design is what sets Interiority apart. They
-            don't just furnish spaces — they compose experiences."
+            don't just furnish spaces; they compose experiences."
           </p>
           <footer className="mt-6">
             <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-outline">
-              — Hospitality Design Director
+              Hospitality Design Director
             </span>
           </footer>
         </motion.blockquote>

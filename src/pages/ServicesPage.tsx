@@ -13,7 +13,7 @@ const reasons = [
   {
     num: '01',
     title: 'End-to-End Execution',
-    text: 'From initial concept and mood boards through procurement, production, and final installation — we manage every stage so you can focus on your guests.',
+    text: 'From initial concept and mood boards through procurement, production, and final installation, we manage every stage so you can focus on your guests.',
   },
   {
     num: '02',
@@ -28,7 +28,7 @@ const reasons = [
   {
     num: '04',
     title: 'Pan-India + Global Reach',
-    text: 'Our artisan network and production partners span India and beyond — enabling us to deliver consistently at scale, wherever your properties are.',
+    text: 'Our artisan network and production partners span India and beyond, enabling us to deliver consistently at scale, wherever your properties are.',
   },
 ]
 
@@ -41,7 +41,7 @@ export default function ServicesPage() {
           eyebrow="Our Services"
           title="Full-Spectrum"
           subtitle="Hospitality Design"
-          description="From spatial concepts to the smallest guest-room detail — we offer end-to-end design, product development, and procurement services for luxury hotels, resorts, spas, and private clubs worldwide."
+          description="From spatial concepts to the smallest guest-room detail, we offer end-to-end design, product development, and procurement services for luxury hotels, resorts, spas, and private clubs worldwide."
           image={heroImg}
         />
         <Services />

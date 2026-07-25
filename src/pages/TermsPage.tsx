@@ -28,11 +28,11 @@ export default function TermsPage() {
             </Block>
 
             <Block title="2. Services">
-              Interiority, operated by Coherence Works, provides luxury hospitality design services including interior design consulting, product development, amenity system design, and spatial styling. All engagements are subject to separate written agreements between Interiority and the client.
+              Interiority, operated by Coherence Works, provides luxury hospitality design services including interior design consulting, product development, Amenities System design, and spatial styling. All engagements are subject to separate written agreements between Interiority and the client.
             </Block>
 
             <Block title="3. Intellectual Property">
-              All content on this website — including text, images, photographs, designs, logos, and layouts — is the property of Interiority / Coherence Works and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.
+              All content on this website, including text, images, photographs, designs, logos, and layouts, is the property of Interiority / Coherence Works and is protected by applicable intellectual property laws. You may not reproduce, distribute, or use any content without prior written permission.
             </Block>
 
             <Block title="4. Product & Service Information">

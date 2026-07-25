@@ -1,30 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { galleryItems } from '../data/galleryItems'
 
-import crystalLamp from '../assets/crystal-lamp.png'
-import leatherHolder from '../assets/leather-holder.png'
-import bathroomAmenities from '../assets/bathroom-amenities.png'
-import leatherTray from '../assets/leather-tray.png'
-import hotelLobby from '../assets/hotel-lobby.png'
-import glassware from '../assets/glassware.png'
-import floralArrangement from '../assets/floral-arrangement.png'
-import bathroomSet from '../assets/bathroom-set.png'
-import luxurySuite from '../assets/luxury-suite.png'
-import artisanVase from '../assets/artisan-vase.png'
-
-const galleryItems = [
-  { title: 'Crystal Lamp', category: 'Guest Suite Lighting', material: 'GLASS', photo: crystalLamp },
-  { title: 'Leather Paper Holder', category: 'Room Desk Accessory', material: 'LEATHER', photo: leatherHolder },
-  { title: 'Amber Amenities', category: 'Bathroom Ritual Set', material: 'STONE', photo: bathroomAmenities },
-  { title: 'Serving Tray', category: 'Lounge Accessory', material: 'LEATHER', photo: leatherTray },
-  { title: 'Hotel Lobby', category: 'Spatial Design', material: 'MARBLE', photo: hotelLobby },
-  { title: 'Glassware Set', category: 'Tabletop Styling', material: 'CRYSTAL', photo: glassware },
-  { title: 'Floral Console', category: 'Arrival Experience', material: 'BRASS', photo: floralArrangement },
-  { title: 'Bathroom Set', category: 'Vanity Accessories', material: 'STONE', photo: bathroomSet },
-  { title: 'Five-Star Suite', category: 'Interior Styling', material: 'LINEN', photo: luxurySuite },
-  { title: 'Artisan Vase', category: 'Decorative Object', material: 'TERRACOTTA', photo: artisanVase },
-]
-
-export default function CircularGallery() {
+export default function CircularGallery({ limit = 10 }: { limit?: number } = {}) {
   const [rotation, setRotation] = useState(0)
   const [isScrolling, setIsScrolling] = useState(false)
   const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
@@ -32,8 +9,9 @@ export default function CircularGallery() {
   const containerRef = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useRef(false)
 
+  const items = galleryItems.slice(0, limit)
   const autoRotateSpeed = 0.15
-  const itemCount = galleryItems.length
+  const itemCount = items.length
   const angleStep = 360 / itemCount
 
   useEffect(() => {
@@ -119,7 +97,7 @@ export default function CircularGallery() {
               transformStyle: 'preserve-3d',
             }}
           >
-            {galleryItems.map((item, i) => {
+            {items.map((item, i) => {
               const itemAngle = i * angleStep + rotation
               const normalizedAngle = Math.abs(((itemAngle % 360) + 360) % 360)
               const adjustedAngle = normalizedAngle > 180 ? 360 - normalizedAngle : normalizedAngle
@@ -141,7 +119,7 @@ export default function CircularGallery() {
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <img
                         src={item.photo}
-                        alt={`${item.title} — ${item.category}`}
+                        alt={`${item.title}, ${item.category}`}
                         className="w-full h-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />

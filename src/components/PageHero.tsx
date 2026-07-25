@@ -35,7 +35,7 @@ export default function PageHero({ eyebrow, title, subtitle, description, image 
       <div className="absolute inset-0 bg-gradient-to-t from-warm-charcoal via-warm-charcoal/60 to-warm-charcoal/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-warm-charcoal/50 to-transparent" />
 
-      {/* Content — bottom-aligned */}
+      {/* Content, bottom-aligned */}
       <div className="relative z-10 max-w-[1440px] mx-auto w-full px-6 md:px-20 pb-16 md:pb-24 pt-40 md:pt-52">
         <motion.span
           className="font-sans text-[9px] font-semibold tracking-[0.3em] uppercase text-brass block mb-5"

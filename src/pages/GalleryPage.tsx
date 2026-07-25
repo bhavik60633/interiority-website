@@ -18,7 +18,7 @@ export default function GalleryPage() {
           eyebrow="Gallery"
           title="A Curated"
           subtitle="Collection"
-          description="Explore the objects, textures, and spatial details that define our work — from crystal and brass to leather and stone, each piece is photographed in the setting it was designed for."
+          description="Explore the objects, textures, and spatial details that define our work, from crystal and brass to leather and stone, each piece is photographed in the setting it was designed for."
           image={heroImg}
         />
         <CircularGallery />

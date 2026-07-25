@@ -4,20 +4,20 @@ import grandLobby from '../assets/grand-lobby.png'
 
 /*
   Typography scale (golden ratio ~1.618):
-  Label:     12px  — sans, uppercase, tracked
-  Subtitle:  clamp(1rem, 1.8vw, 1.5rem) — italic serif accent
-  Headline:  clamp(2rem, 4.5vw, 4.2rem) — serif, semibold, the star
-  Brand:     clamp(2.8rem, 6vw, 5.5rem) — "Interiority" gets more presence
-  CTA:       9px   — tiny, refined, uppercase ghost buttons (luxury convention)
+  Label:     12px, sans, uppercase, tracked
+  Subtitle:  clamp(1rem, 1.8vw, 1.5rem), italic serif accent
+  Headline:  clamp(2rem, 4.5vw, 4.2rem), serif, semibold, the star
+  Brand:     clamp(2.8rem, 6vw, 5.5rem), "Interiority" gets more presence
+  CTA:       9px , tiny, refined, uppercase ghost buttons (luxury convention)
 
   Spacing follows 8px grid: 8, 16, 24, 32, 40, 48, 56, 64
-  CTA sizing: small enough to feel secondary to the headline (Fitts's law —
+  CTA sizing: small enough to feel secondary to the headline (Fitts's law,
   easy to click but not visually dominant)
 */
 
 const headlines = [
-  { top: 'Designing', bottom: 'Five‑Star Hospitality' },
-  { top: 'Quiet Luxury', bottom: 'Precisely Made' },
+  { top: 'Designing', bottom: 'Exquisite Indulgence' },
+  { top: 'Quiet Luxury', bottom: 'Meticulously Constructed' },
   { top: '', bottom: 'Interiority' },
 ]
 
@@ -49,10 +49,10 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/15" />
 
-        {/* Content — vertically centered with proper spacing hierarchy */}
+        {/* Content, vertically centered with proper spacing hierarchy */}
         <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 md:px-20">
 
-          {/* Thin accent line — 32px above label */}
+          {/* Thin accent line, 32px above label */}
           <motion.div
             className="w-8 h-px bg-brass/40 mb-6"
             initial={{ scaleX: 0 }}
@@ -60,20 +60,20 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           />
 
-          {/* Label — small, tracked, white, clearly readable */}
+          {/* Label, small, tracked, white, clearly readable */}
           <motion.span
             className="font-sans text-[11px] md:text-[12px] font-semibold tracking-[0.25em] uppercase text-white/80 mb-5 md:mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            Exquisite Indulgence
+            Five‑Star Hospitality
           </motion.span>
 
-          {/* Headlines — the visual anchor */}
+          {/* Headlines, the visual anchor */}
           <ScrollHeadlines scrollYProgress={scrollYProgress} />
 
-          {/* Diamond separator — 32px gap */}
+          {/* Diamond separator, 32px gap */}
           <motion.div
             className="flex items-center gap-3 mt-7 md:mt-8 mb-8 md:mb-10"
             initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function Hero() {
             <div className="w-6 h-px bg-brass/30" />
           </motion.div>
 
-          {/* CTAs — refined, minimal, secondary to headline */}
+          {/* CTAs, refined, minimal, secondary to headline */}
           <motion.div
             className="flex flex-row gap-3 md:gap-4"
             initial={{ opacity: 0, y: 12 }}

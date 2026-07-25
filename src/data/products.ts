@@ -23,7 +23,7 @@ export const products: Product[] = [
   { title: 'Glassware', material: 'CRYSTAL', img: vaseGreenGlass },
   { title: 'Trays', material: 'LEATHER', img: traySilverBowlMug },
   { title: 'Vases & Bowls', material: 'TERRACOTTA', img: artisanVase },
-  { title: 'Lighting — Lamps & Candle Stands', material: 'GLASS & BRASS', img: candleStandFlower },
+  { title: 'Lamps & Candle Stands', material: 'GLASS & BRASS', img: candleStandFlower },
   { title: 'Decorative Accents', material: 'BRASS', img: metalMurals },
   { title: 'Watch Box', material: 'MIXED', img: essentials },
   { title: 'Waste Bin', material: 'LEATHER', img: leatheriteFurniture },
@@ -31,6 +31,6 @@ export const products: Product[] = [
 ]
 
 /*
-  Not yet added — no product photography supplied for these categories:
+  Not yet added, no product photography supplied for these categories:
   Diffusers, Ceramic Planters, Laundry Bags. Add once photos are available.
 */

@@ -58,7 +58,7 @@ export default function LuxuryInteriors({ variant = 'full', limit, ctaHref = '/p
               >
                 <img
                   src={project.img}
-                  alt={`${project.title} — ${project.label}`}
+                  alt={`${project.title}, ${project.label}`}
                   className="w-full h-full object-cover object-center transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

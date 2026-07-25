@@ -34,7 +34,7 @@ export default function CompanyStory() {
             At Interiority, our methodology integrates soulful expression with refined
             aesthetics. We curate decor pieces that unite artisanal craftsmanship,
             sophistication, and contemporary design to establish distinctive
-            environments — for hotels, spas, private clubs, resorts, restaurants, and
+            environments, for hotels, spas, private clubs, resorts, restaurants, and
             the residences of those who notice the difference.
           </p>
         </motion.div>

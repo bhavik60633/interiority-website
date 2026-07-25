@@ -9,18 +9,18 @@ interface GalleryMosaicProps {
   ctaHref?: string
 }
 
-// Editorial packed mosaic — mixed tile sizes, dense auto-flow, so the section
+// Editorial packed mosaic, mixed tile sizes, dense auto-flow, so the section
 // is full of pictures instead of the empty space a rotating carousel leaves.
 const spanPattern = [
-  'md:col-span-2 md:row-span-2', // 0 — hero tile
+  'md:col-span-2 md:row-span-2', // 0, hero tile
   '',
-  'md:row-span-2', // 2 — tall
+  'md:row-span-2', // 2, tall
   '',
-  'md:col-span-2', // 4 — wide
+  'md:col-span-2', // 4, wide
   '',
-  'md:row-span-2', // 6 — tall
+  'md:row-span-2', // 6, tall
   '',
-  'md:col-span-2', // 8 — wide
+  'md:col-span-2', // 8, wide
   '',
 ]
 
@@ -61,7 +61,7 @@ export default function GalleryMosaic({ variant = 'full', limit, ctaHref = '/gal
             >
               <img
                 src={item.photo}
-                alt={`${item.title} — ${item.category}`}
+                alt={`${item.title}, ${item.category}`}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"
                 loading="lazy"
               />

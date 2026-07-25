@@ -46,17 +46,17 @@ export default function LagShowcase({ showHeading = true }: LagShowcaseProps) {
       <div className="relative h-[100svh] w-full overflow-hidden bg-[#efe8de]">
         <video
           ref={videoRef}
-          src="/lag/hero.mp4"
+          src="/lag/hero.mp4?v=3"
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-contain md:object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* 30% dark tint — adds depth and improves overlay legibility */}
+        {/* 30% dark tint, adds depth and improves overlay legibility */}
         <div className="pointer-events-none absolute inset-0 bg-black/30" />
 
-        {/* Bottom tagline — fades in after video ends or on scroll */}
+        {/* Bottom tagline, fades in after video ends or on scroll */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end pb-10 sm:pb-14 md:pb-20">
           <motion.span
             className="font-sans text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-[0.35em] uppercase text-white/80 text-center px-4"

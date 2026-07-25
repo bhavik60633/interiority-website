@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Do you work with hotels outside India?',
-    a: 'Yes — we serve luxury properties across the Middle East, Southeast Asia, and Europe. Our logistics network handles international shipping and installation.',
+    a: 'Yes, we serve luxury properties across the Middle East, Southeast Asia, and Europe. Our logistics network handles international shipping and installation.',
   },
   {
     q: 'Can we order samples before committing?',
@@ -36,7 +36,7 @@ export default function ContactPage() {
           eyebrow="Contact Us"
           title="Let’s Build Something"
           subtitle="Together"
-          description="Whether you are planning a new property, refreshing guest rooms, or sourcing bespoke amenities — our team is ready to help. Reach out and we will respond within 24 hours."
+          description="Whether you are planning a new property, refreshing guest rooms, or sourcing bespoke amenities, our team is ready to help. Reach out and we will respond within 24 hours."
           image={heroImg}
         />
         <ContactDetails />

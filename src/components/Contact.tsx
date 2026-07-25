@@ -77,7 +77,7 @@ export default function Contact() {
                 I'm interested in
               </label>
               <div className="flex flex-wrap gap-2">
-                {['Interior Design', 'Amenity Systems', 'Product Development', 'Design Consulting', 'Lăg Hydrosols'].map((opt) => (
+                {['Interior Design', 'Amenities System', 'Product Development', 'Design Consulting', 'Lăg Hydrosols'].map((opt) => (
                   <label key={opt} className="group cursor-pointer">
                     <input type="checkbox" name="interest" value={opt} className="peer sr-only" />
                     <span className="inline-block px-4 py-2 font-sans text-[10px] tracking-[0.12em] uppercase border border-inverse-on-surface/15 text-inverse-on-surface/50 rounded-full transition-all duration-300 peer-checked:border-brass peer-checked:text-brass peer-checked:bg-brass/10 hover:border-inverse-on-surface/30">

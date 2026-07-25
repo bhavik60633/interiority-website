@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <BeyondInteriors />
-        <Services variant="teaser" limit={3} ctaHref="/services" />
+        <Services variant="teaser" limit={5} ctaHref="/services" />
         <FeaturedVisual />
         <CircularGallery />
         <ProductCollection variant="teaser" limit={6} ctaHref="/products" />

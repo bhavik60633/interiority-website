@@ -27,7 +27,7 @@ export default function ProjectsPage() {
           eyebrow="Our Projects"
           title="Spaces That Tell"
           subtitle="A Story"
-          description="Every project begins with a conversation — about the brand, the guest, and the feeling the space should evoke. From grand lobbies to intimate suites, we design environments that guests remember long after checkout."
+          description="Every project begins with a conversation, about the brand, the guest, and the feeling the space should evoke. From grand lobbies to intimate suites, we design environments that guests remember long after checkout."
           image={heroImg}
         />
         <ProjectCapabilities />

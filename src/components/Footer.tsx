@@ -14,7 +14,7 @@ const navLinks = [
 
 const serviceLinks = [
   { label: 'Design Consulting', to: '/services' },
-  { label: 'Amenity Systems', to: '/services' },
+  { label: 'Amenities System', to: '/services' },
   { label: 'Glassware & Accessories', to: '/services' },
   { label: 'Interior Styling', to: '/services' },
   { label: 'Product Development', to: '/services' },
@@ -47,7 +47,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-sans text-[13px] text-inverse-on-surface/40 leading-[1.7] max-w-[280px]">
-              Luxury hospitality design — interiors, amenity systems, and
+              Luxury hospitality design, interiors, Amenities System, and
               refined objects for five-star guest experiences across India
               and globally.
             </p>

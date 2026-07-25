@@ -88,7 +88,7 @@ export default function Process() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-          {/* Steps — tall blocks so scrolling advances them */}
+          {/* Steps, tall blocks so scrolling advances them */}
           <div className="flex flex-col order-2 lg:order-1">
             {steps.map((step, i) => {
               const active = i === activeStep
@@ -151,7 +151,7 @@ export default function Process() {
             })}
           </div>
 
-          {/* Sticky image — stays while steps scroll, crossfades to active */}
+          {/* Sticky image, stays while steps scroll, crossfades to active */}
           <div className="hidden lg:block order-1 lg:order-2">
             <div className="sticky top-28 h-[72vh] rounded-[8px] overflow-hidden ring-1 ring-black/[0.05] shadow-[0_30px_70px_-24px_rgba(42,40,38,0.4)]">
               {steps.map((step, i) => (
